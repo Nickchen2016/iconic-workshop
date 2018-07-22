@@ -1,0 +1,506 @@
+@charset "UTF-8";
+/* Simple fluid media
+   Note: Fluid media requires that you remove the media's height and width attributes from the HTML
+   http://www.alistapart.com/articles/fluid-images/ 
+*/
+img, object, embed, video {
+	max-width: 100%;
+}
+/* IE 6 does not support max-width so default to width 100% */
+.ie6 img {
+	width:100%;
+}
+
+/*
+	Dreamweaver Fluid Grid Properties
+	----------------------------------
+	dw-num-cols-mobile:		5;
+	dw-num-cols-tablet:		8;
+	dw-num-cols-desktop:	10;
+	dw-gutter-percentage:	25;
+	
+	Inspiration from "Responsive Web Design" by Ethan Marcotte 
+	http://www.alistapart.com/articles/responsive-web-design
+	
+	and Golden Grid System by Joni Korpi
+	http://goldengridsystem.com/
+*/
+
+
+@font-face {
+	font-family:"AvenirNextHeavyItalic";
+	src:url("fonts/AvenirNextHeavyItalic.ttf");	
+	}
+@font-face {
+	font-family:"AvenirNextBoldItalic";
+	src:url("fonts/AvenirNextBoldItalic.ttf");	
+	}
+@font-face {
+	font-family:"AvenirNextMedItalic";
+	src:url("fonts/AvenirNextMedItalic.ttf");	
+	}
+@font-face {
+	font-family:"AvenirNextUltraLt";
+	src:url("fonts/AvenirNextUltraLt.otf");		
+	}
+@font-face {
+	font-family:"AvenirNextBold";
+	src:url("fonts/AvenirNextBold.otf");		
+	}
+
+/* Mobile Layout: 480px and below. */
+
+.gridContainer {
+	margin-left: auto;
+	margin-right: auto;
+	width: 87.36%;
+	padding-left: 1.82%;
+	padding-right: 1.82%;
+	overflow: hidden;
+}
+
+#screen-side {
+	clear: none;
+	float: left;
+	margin-left: 4.1666%;
+	width: 100%;
+	display: block;
+}
+
+#side-slider {
+	clear: both;
+	float: left;
+	margin-left: 0;
+	width: 100%;
+	display: block;
+}
+
+#footer {
+	clear: both;
+	float: left;
+	margin-left: 0;
+	width: 100%;
+	display: block;
+}
+
+
+
+/* Tablet Layout: 481px to 768px. Inherits styles from: Mobile Layout. */
+
+@media only screen and (min-width: 481px) {
+.gridContainer {
+	width: 90.675%;
+	padding-left: 1.1625%;
+	padding-right: 1.1625%;
+	overflow: hidden;
+}
+#screen-side {
+	clear: both;
+	float: left;
+	margin-left: 0;
+	width: 100%;
+	display: block;
+}
+#side-slider {
+	clear: both;
+	float: left;
+	margin-left: 0;
+	width: 100%;
+	display: block;
+}
+#footer {
+	clear: both;
+	float: left;
+	margin-left: 0;
+	width: 100%;
+	display: block;
+}
+
+
+}
+
+/* Desktop Layout: 769px to a max of 1232px.  Inherits styles from: Mobile Layout and Tablet Layout. */
+
+@media only screen and (min-width: 769px) {
+.gridContainer {
+	width: 88.2%;
+	max-width: 1232px;
+	padding-left: 0px;
+	padding-right: 0px;
+	margin: auto;
+	overflow:hidden;
+	box-sizing:border-box;
+}
+#sidebar {
+  clear: both;
+  float: left;
+  display: block;
+  position:fixed;
+  top:0px;
+  left:0px;
+  width:68%;
+  height:100vh;
+  transform:translateX(-68%);
+  transition:transform 500ms;
+}
+
+#sidebar.active {
+   transform:translateX(0);
+   transition:transform 500ms;
+   overflow:hidden;
+}
+
+#side-slider {
+	clear: both;
+	height: 100%;
+	margin: 0;
+	clear: both;
+  	float: left;
+  	width: 100%;
+  	display: block;
+}
+
+/*------------------------------*/
+
+#mini-slider {
+	clear: both;
+  	float: left;
+  	width: 100%;
+	height: 100%;
+	white-space: nowrap;
+	transform:translateX(0);
+	transition:transform 500ms;
+}
+
+#mini-slider > * {
+	display: inline-block;
+	vertical-align: top;
+	width: 100%;
+	height: 100%;	
+}
+
+#mini1 {
+	background-image: url('./img/back.jpg');
+	background-repeat: no-repeat;
+  	background-size:cover;
+}
+
+#mini2 {
+
+	background-image: url('./img/back2.jpg');
+	background-repeat: no-repeat;
+  	background-size:cover;
+}
+
+#mini3 {
+
+	background-image: url('./img/back3.jpg');
+	background-repeat: no-repeat;
+  	background-size:cover;
+}
+
+#mini-slider.active1 {
+	transform:translateX(   0%);
+	transition:transform 500ms;
+}
+
+#mini-slider.active2 {
+	transform:translateX(-100%);
+	transition:transform 500ms;
+}
+
+#mini-slider.active3 {
+	transform:translateX(-200%);
+	transition:transform 500ms;
+}
+
+#bullets {
+	z-index: 1;
+	top:-12%;
+	clear: both;
+  	float: left;
+  	display: block;
+	position:relative;
+	width: 100%;
+	text-align: center;
+}
+#bullets li {
+	list-style-type: none;
+	display: inline-block;
+	margin: 0 20px;
+}
+
+#bullets li span {
+	position:relative;
+  	display:block;
+  	width:15px;
+  	height:15px;
+	border:1px solid white;
+	border-radius: 50%;
+  	-webkit-border-radius: 50%;
+	margin:30px 0px;
+  	cursor:pointer;
+}
+
+#bullets li span:hover {
+	background:white !important;
+}
+
+#s1.active {
+	background:white;
+}
+
+#s2.active {
+	background:white;
+}
+
+#s3.active {
+	background:white;
+}
+/*------------------------------*/
+
+#toggle-btn {
+	clear: both;
+	float: left;
+	display: block;
+	position: fixed;
+	width: 100%;
+	left: 35px;
+	top: 25px;
+	transform: translateX(0);
+	transition: transform 500ms;
+}
+#toggle-btn.active {
+  transform:translateX(68%);
+  transition:transform 500ms;
+}
+#toggle-btn span {
+  position:relative;
+  top:0px;
+  display:block;
+  background:black;
+  width:40px;
+  height:6px;
+  margin:7px 0px;
+  cursor:pointer;
+  transition:transform 300ms; 
+}
+#toggle-btn.active span:nth-child(1) {
+  top:13px;
+  transform:rotate(45deg);
+}
+#toggle-btn.active span:nth-child(2) {
+  opacity:0;
+}
+#toggle-btn.active span:nth-child(3) {
+  top:-13px;
+  transform:rotate(-45deg);
+}
+
+#screen-side {
+  clear: both;
+  float: left;
+  width: 100wh;
+  height: 100vh;
+  display: block;
+  position:fixed;
+  background:white;
+  left:0px;
+  top:0px;
+  transform:translateX(0);
+  transition:transform 500ms;
+}
+
+#screen-side.active {
+  transform:translateX(68%);
+  transition:transform 500ms;
+}
+
+#logo {
+  clear: both;
+  float: left;
+  z-index: 1;
+  display: block;
+  position: fixed;
+  width: 100%;
+  left:2%;
+  bottom:3%;
+  transform: translateX(0);
+  transition: transform 500ms;
+}
+#logo.active {
+  transform:translateX(68%);
+  transition:transform 500ms;
+}
+
+#side-slider {
+  clear: both;
+  float: left;
+  margin-left: 0;
+  width: 100%;
+  display: block;
+  text-align:center;
+}
+
+#footer {
+  height: 10%;
+  clear: both;
+  float: left;
+  top: -10%;
+  margin-left: 0;
+  width: 100%;
+  display: block;
+  position: relative;
+}
+
+#copyright {
+  margin-top: 5%;
+  margin-right: 1.2%;
+  text-align: right;
+  font-family: "AvenirNextHeavyItalic";
+  font-size: 1.2em;
+}
+
+#info-bar {
+	clear: both;
+  	display: block;
+	position:relative;
+	margin-left: auto; 
+	margin-right: auto; 
+	width:300px;
+	height:65px;
+	top:25%;
+	font-family:'AvenirNextUltraLt'; 
+	font-size:1.6em; 
+	color:white;
+}
+
+#control {
+	height:65px;
+	width:32px;
+	float:left;
+	display: block;
+	position:relative;
+}
+
+#up, #down {
+	height:29.5px;
+	width: 26px;
+	float: left;
+	display:block;
+	position:relative;
+	border-right:6px solid black;
+	background: rgb(0,0,255);
+	cursor: pointer;
+}
+
+#up span {
+	margin-top:16px;
+	margin-left:7px;
+	transform: rotate(135deg);
+}
+
+#down span {
+	margin-left:7px;
+	transform: rotate(-45deg);
+}
+
+#up span, #down span {
+	float: left;
+	display:block;
+	position:relative;
+	height:13px;
+	width:13px;
+	box-shadow: -4px 4px 0 rgba(255,255,255,1);
+}
+
+#up:hover span, #down:hover span {
+	box-shadow: -4px 4px 0 rgba(255,255,255,.2);
+}
+
+#up {
+	border-bottom:3px solid black;
+
+}
+
+#down {
+	border-top:3px solid black;
+}
+
+#info {
+	overflow: hidden;
+	height:100%;
+	width:268px;
+	float: left;
+	display: block;
+	position:relative;
+	background: rgb(0,0,51);
+}
+
+#icon {
+	height:100%;
+	width: 63px;
+	float: left;
+	display:block;
+	position: relative;
+	align-content: center;
+	background:rgb(0,0,255);
+}
+
+#icon1 {
+	transform:translateY(0);
+	transition:transform 500ms ease-in;
+}
+
+#icon1.active {
+	transform:translateY(-100%);
+  	transition:transform 500ms ease-out;
+}
+
+#i1 {
+	margin-left:-8%;
+	margin-top:12%;
+}
+
+#i2 {
+	transform: translateY(145%);
+	margin-left:-70%;
+}
+
+#triangle {
+	margin-top:8%;
+	margin-left:21%;
+	width: 1px;
+  	height: 3px;
+  	border-bottom: solid 20px rgb(0,0,255);
+  	border-left: solid 15px transparent;
+	border-right: solid 15px transparent;
+	transform: rotate(90deg);  
+}
+
+#descrip {
+	cursor: pointer;
+	transform:translateY(0);
+	transition:transform 500ms ease-in;
+}
+
+#descrip a {color:white;}
+
+#descrip a:hover, #descrip:hover {
+	color: rgba(255,255,255,.2);
+}
+
+#descrip.active {
+	transform:translateY(-68%);
+	transition:transform 500ms ease-out;
+}
+
+body::-moz-selection {
+	background: yellow;
+}
+
+body ::selection {
+	background: yellow;
+}
+
+}

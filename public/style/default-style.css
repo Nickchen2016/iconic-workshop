@@ -1,0 +1,96 @@
+@charset "utf-8";
+
+/******** HSilder Default Styles ********/
+/* .slider article{
+	color: white;
+	text-shadow: 1px 1px 3px rgba(51, 51, 51, 0.50);
+	right: 0;	 default at right*/
+	/* background: -webkit-linear-gradient(top,transparent ,rgba(0, 0, 0, 0.80) 100%);
+	background: -moz-linear-gradient(top,transparent ,rgba(0, 0, 0, 0.80) 100%);
+	background: -ms-linear-gradient(top,transparent ,rgba(0, 0, 0, 0.80) 100%);
+	-webkit-transition:opacity 0.5s ease,-webkit-transform 1s ease-out;
+	-moz-transition:opacity 0.5s ease,-moz-transform 1s ease-out;
+	-ms-transition:opacity 0.5s ease,-ms-transform 1s ease-out;
+    padding: 42px;
+	padding-left: 20px;
+} */
+/* .slider article.left{
+	left:0;
+}
+.slider article.right{
+	right:0;
+} */
+
+/******* pagination ********/
+.pagination {
+  position: absolute;
+  left: 1.5%;
+  top: 29%;
+  z-index: 1;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.pagination li {
+  padding: 22px;
+  width: 30px;
+  height: 30px;
+}
+.pagination li a{
+  margin: 0 auto;
+  width: 12px;
+  height: 12px;
+  display: block;
+  background: #BBBDC0;
+
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+
+  -webkit-transition: all 0.1s ease;
+  -moz-transition:all 0.1s ease;
+  -ms-transition:all 0.1s ease;
+}
+
+.pagination li a:hover,.pagination li a.active{
+    margin: 0 auto;
+  	width: 19px;
+  	height: 19px;
+  	display: block;
+  	background: black;
+  	border-radius: 10px;
+  	-webkit-border-radius: 10px;
+  	-moz-border-radius: 10px;
+  	-webkit-transition:all 0.1s ease ;
+}
+
+.pagination li a:hover:after,.pagination li a.active:after{
+
+	content: attr(data-hover);
+	color:black;
+	white-space: pre;
+	position: relative;
+	top: -2px;
+	margin-left: 30px;
+	font-family: "AvenirNextMedItalic";
+	font-size: 2em;
+}
+
+/* @media only screen and (max-width: 768px){
+    .slider h1{
+        font-size:50px;
+    }*/
+    .slider h2{
+        font-family: "AvenirNextHeavyItalic";
+        font-size:50px;
+        color: black;
+        text-align: center;
+        margin-top: 28%;
+    }
+ /*   .slider h3{
+        font-size:22px;
+        margin-top: 8px;
+        margin-right: 10px;
+    }
+} */
