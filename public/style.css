@@ -176,20 +176,28 @@ img, object, embed, video {
 	display: inline-block;
 	vertical-align: top;
 	width: 100%;
-	height: 100%;	
+	height: 100%	
 }
 
 #mini1 {
 	background-image: url('./img/back.jpg');
 	background-repeat: no-repeat;
-  	background-size:cover;
+  	background-size:cover
 }
 
 #mini2 {
 
 	background-image: url('./img/back2.jpg');
 	background-repeat: no-repeat;
-  	background-size:cover;
+  	background-size:cover
+}
+
+#mini2 a {
+	color: white
+}
+
+#mini2 a p:hover {
+	color: rgba(255,255,255,.2)
 }
 
 #mini3 {
@@ -266,7 +274,7 @@ img, object, embed, video {
 	position: fixed;
 	width: 100%;
 	left: 35px;
-	top: 25px;
+	bottom: 25px;
 	transform: translateX(0);
 	transition: transform 500ms;
 }
@@ -276,14 +284,13 @@ img, object, embed, video {
 }
 #toggle-btn span {
   position:relative;
-  top:0px;
   display:block;
   background:black;
   width:40px;
   height:6px;
   margin:7px 0px;
   cursor:pointer;
-  transition:transform 300ms; 
+  transition:transform 300ms;
 }
 #toggle-btn.active span:nth-child(1) {
   top:13px;
@@ -323,8 +330,8 @@ img, object, embed, video {
   display: block;
   position: fixed;
   width: 100%;
-  left:2%;
-  bottom:3%;
+  left:1%;
+  top:2%;
   transform: translateX(0);
   transition: transform 500ms;
 }
@@ -375,6 +382,20 @@ img, object, embed, video {
 	color:white;
 }
 
+#github {
+	clear: both;
+	display: inline-flex;
+	position:relative;
+	width: 268px; height: 60px; 
+	background-color: rgb(0,0,0);
+	cursor: pointer;
+}
+
+#gitcat {
+	margin: 3%;
+	width: 17%
+}
+
 #control {
 	height:65px;
 	width:32px;
@@ -389,7 +410,7 @@ img, object, embed, video {
 	float: left;
 	display:block;
 	position:relative;
-	border-right:6px solid black;
+	border-right:6px solid rgb(35,31,32);
 	background: rgb(0,0,255);
 	cursor: pointer;
 }
@@ -419,12 +440,12 @@ img, object, embed, video {
 }
 
 #up {
-	border-bottom:3px solid black;
+	border-bottom:3px solid rgb(35,31,32);
 
 }
 
 #down {
-	border-top:3px solid black;
+	border-top:3px solid rgb(35,31,32);
 }
 
 #info {
@@ -434,7 +455,7 @@ img, object, embed, video {
 	float: left;
 	display: block;
 	position:relative;
-	background: rgb(0,0,51);
+	background: rgba(0,0,0,0.2)
 }
 
 #icon {
@@ -444,7 +465,7 @@ img, object, embed, video {
 	display:block;
 	position: relative;
 	align-content: center;
-	background:rgb(0,0,255);
+	background:rgb(0,51,255);
 }
 
 #icon1 {
@@ -487,7 +508,7 @@ img, object, embed, video {
 #descrip a {color:white;}
 
 #descrip a:hover, #descrip:hover {
-	color: rgba(255,255,255,.2);
+	color: rgb(255,255,255,.5);
 }
 
 #descrip.active {
@@ -501,6 +522,15 @@ body::-moz-selection {
 
 body ::selection {
 	background: yellow;
+}
+
+.so1 {
+	width:30%; height:60%;margin-top:10%;
+	background-color: slateblue;margin-left: auto;
+}
+.so2 {
+	width:40%;height:60%;margin-top:10%;
+	background-color: black; margin-right: auto;
 }
 
 }

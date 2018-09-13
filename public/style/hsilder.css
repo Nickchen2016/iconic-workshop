@@ -17,7 +17,7 @@ html{
 body{
 	/* This image will be displayed fullscreen */
     background: white;
-    /*background-size:cover; */
+    /* background-size:cover; */
     /* Workaround for some mobile browsers */
     min-height:100%;
     overflow: hidden;
