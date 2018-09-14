@@ -508,7 +508,7 @@ img, object, embed, video {
 #descrip a {color:white;}
 
 #descrip a:hover, #descrip:hover {
-	color: rgb(255,255,255,.5);
+	color: rgb(147,149,152);
 }
 
 #descrip.active {
@@ -525,12 +525,42 @@ body ::selection {
 }
 
 .so1 {
-	width:30%; height:60%;margin-top:10%;
-	background-color: slateblue;margin-left: auto;
+	z-index:0;margin-top:10%;
+	margin-left: auto
 }
 .so2 {
-	width:40%;height:60%;margin-top:10%;
-	background-color: black; margin-right: auto;
+	margin-top:2%;
+	margin-right: auto
+}
+
+.soImg1 {
+	margin-top:20%;
+	margin-left:18%
+}
+
+.soImg2 {
+	margin-left:12%
+}
+
+#knowMore {
+	width: 100px; height: 40px;margin-right:8%;
+	display: flex;
+	border-radius: 40px; background: black;
+	text-align: center;
+	cursor: pointer;
+}
+#knowMore:hover {
+	background: rgba(0,0,0,.6)
+}
+
+#addChrome {
+	width: 140px; height: 40px; margin-right:12%;
+	border-radius: 40px; background:rgb(238,58,57);
+	text-align: center;
+	cursor: pointer;
+}
+#addChrome:hover {
+	background:rgb(255,102,102)
 }
 
 }
