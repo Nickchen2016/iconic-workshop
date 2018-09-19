@@ -182,14 +182,16 @@ img, object, embed, video {
 #mini1 {
 	background-image: url('./img/back.jpg');
 	background-repeat: no-repeat;
-  	background-size:cover
+	background-size:cover;
+	text-align:center;
 }
 
 #mini2 {
 
 	background-image: url('./img/back2.jpg');
 	background-repeat: no-repeat;
-  	background-size:cover
+	background-size:cover;
+	text-align:center  
 }
 
 #mini2 a {
@@ -201,7 +203,6 @@ img, object, embed, video {
 }
 
 #mini3 {
-
 	background-image: url('./img/back3.jpg');
 	background-repeat: no-repeat;
   	background-size:cover;
@@ -326,7 +327,7 @@ img, object, embed, video {
 #logo {
   clear: both;
   float: left;
-  z-index: 1;
+  /* z-index: 1; */
   display: block;
   position: fixed;
   width: 100%;
@@ -345,8 +346,7 @@ img, object, embed, video {
   float: left;
   margin-left: 0;
   width: 100%;
-  display: block;
-  text-align:center;
+  display: block
 }
 
 #footer {
@@ -526,24 +526,37 @@ body ::selection {
 
 .so1 {
 	z-index:0;margin-top:10%;
-	margin-left: auto
+	margin-left: 15%;width:35%
 }
 .so2 {
 	margin-top:2%;
-	margin-right: auto
+	width:45%
+}
+
+.ec1 {
+	z-index:0;margin-top:18%;
+	margin-left: 15%;width:15%
+}
+.ec2 {
+	margin-top:2%;
+	width:65%
 }
 
 .soImg1 {
 	margin-top:20%;
-	margin-left:18%
-}
-
-.soImg2 {
 	margin-left:12%
 }
 
+.soImg2 {
+	margin-left:10%
+}
+
+.ecImg1 {
+	margin-top:30%;margin-left:20%
+}
+
 #knowMore {
-	width: 100px; height: 40px;margin-right:8%;
+	width: 100px; height: 40px;margin-right:10%;
 	display: flex;
 	border-radius: 40px; background: black;
 	text-align: center;
@@ -554,13 +567,66 @@ body ::selection {
 }
 
 #addChrome {
-	width: 140px; height: 40px; margin-right:12%;
+	width: 140px; height: 40px; margin-right:10%;
 	border-radius: 40px; background:rgb(238,58,57);
 	text-align: center;
 	cursor: pointer;
 }
 #addChrome:hover {
 	background:rgb(255,102,102)
+}
+
+.icon:hover {
+	opacity: 0.6
+}
+
+input, textarea {
+	width: 100%;margin-left: 30px;
+	font-family:'AvenirNextUltraLt'; font-size:1.6em;
+	color: white;
+	outline: none;
+	border: none;
+	background: transparent
+}
+
+#email1 {
+	height:14%;margin-bottom:5%
+}
+
+#email2 {
+	height:45%;margin-bottom:5%
+}
+
+#email1::before {
+	content:''; margin-top: 3px;
+	width: 8px; height: 20px;
+	background: white;position: absolute
+}
+
+#email2::before {
+	content:''; margin-top: 3px;
+	width: 8px; height: 20px;
+	background: white;position: absolute
+}
+
+input::placeholder, textarea::placeholder {
+	color:white
+}
+
+input:focus, textarea:focus {
+	background: rgba(0,0,0,.1)
+}
+
+input:-webkit-autofill, textarea:-webkit-autofill {
+	transition: background-color 5000s ease-in-out 0s;
+    -webkit-text-fill-color: white !important;
+}
+
+#emailBotton {
+	width: 120px; height: 40px;
+	border-radius: 50px;
+	font-family: 'AvenirNextHeavyItalic';
+	font-size: 2em;
 }
 
 }
