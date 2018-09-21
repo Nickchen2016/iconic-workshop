@@ -52,3 +52,14 @@ function down() {
     document.getElementById('descrip').classList.add('active');
   }
 }
+
+function feedback() {
+  if(document.getElementById('email-feedback').innerText.length===1){
+    document.getElementById('feedback-box').classList.remove('active');
+  }else{
+    document.getElementById('feedback-box').classList.add('active');
+  }
+  setTimeout(()=>{
+    document.getElementById('feedback-box').classList.remove('active');
+  },3000)
+}

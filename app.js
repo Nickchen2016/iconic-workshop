@@ -62,7 +62,7 @@ app.post('/send', (req,res)=>{
 
             console.log('Preview URL: %s', nodemailer.getTestMessageUrl(info));
 
-            res.render('client', {msg:'Email has been send'})
+            res.render('client', {msg:'Your E-mail has been send 🙂'})
         });
 })
 
