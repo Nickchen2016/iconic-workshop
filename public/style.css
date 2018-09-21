@@ -622,7 +622,7 @@ input:-webkit-autofill, textarea:-webkit-autofill {
     -webkit-text-fill-color: white !important;
 }
 
-#emailBotton {
+#emailButton {
 	width: 120px; height: 40px;
 	border-radius: 50px;
 	font-family: 'AvenirNextHeavyItalic';

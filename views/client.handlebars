@@ -82,10 +82,11 @@ Do the following if you're using your customized build of modernizr (http://www.
 			><div id="mini3">
 				<div id="contact" style="margin-top:18%;width:78%;height:68%;margin-left:11%">
 					<p style="font-family:'AvenirNextHeavyItalic';font-size:5em;height:15%;margin-bottom:8%">Write Me</p>
-					<form style="height:80%;vertical-align: middle" method="POST">
-						<div id="email1"><input style="width:90%" type="email" name="email" placeholder="Enter Your email address"></div>
-						<div id="email2"><textarea style="height: 100%; width:90%" name="message" placeholder="Your Message"></textarea></div>
-						<div style="width:100%;display:flex;justify-content:center"><button id="emailBotton" type="submit"><p style="margin-top:6%">Send</p></button></div>
+
+					<form id="contact-form" style="height:80%;vertical-align: middle" method="POST" action="send">
+						<h3 id="error1" style='margin-left:8px; color:red'>Enter a valid email please!</h3><br><div id="email1"><input id="contact-email" style="width:90%" type="email" name="email" placeholder="Enter Your email address"></div>
+						<h3 id="error2" style='margin-left:8px; color:red'>Type Something!</h3><br><div id="email2"><textarea id="contact-msg" style="height: 100%; width:90%" type="text" name="message" placeholder="Your Message"></textarea></div>
+						<div style="width:100%;display:flex;justify-content:center"><button id="emailButton" type="button"><p style="margin-top:6%">Send</p></button></div>
 					</form>
 				</div>
 			</div>
@@ -204,6 +205,50 @@ Do the following if you're using your customized build of modernizr (http://www.
 
 	<script type="text/javascript">
 		$(".slider").HSlider();
+
+		$("#error1").hide();
+		$("#error2").hide();
+		var error_email = false;
+		var error_msg = false;
+		$("#contact-email").focusout(function(){
+			check_email()
+		})
+		$("#contact-msg").focusout(function(){
+			check_msg()
+		})
+
+		$("#emailButton").click(function(){
+			const email = $("#contact-email").val(),
+                  message = $("#contact-msg").val();
+
+			error_email = false;
+			error_msg = false;
+			check_email();
+			check_msg();
+			if(!error_email&&!error_msg){
+				$("#contact-form").trigger("submit")
+			}
+			
+		})
+		function check_email(){
+			if(!$("#contact-email").val().includes("@")||$("#contact-email").val().length===0){
+				$("#error1").show();
+				error_email = true;
+			}else{
+				$("#error1").hide();
+				error_email = false;
+			}
+		}
+		function check_msg(){
+			if($("#contact-msg").val().length===0){
+				$("#error2").show();
+				error_msg = true;
+			}else{
+				$("#error2").hide();
+				error_msg = false;
+			}
+		}
+		
 	</script>
   </div>
   <div id="logo">
@@ -217,6 +262,7 @@ Do the following if you're using your customized build of modernizr (http://www.
 		<span></span>
 	</div>
   </div>
+  {{!-- <div style="position: absolute;z-index:5;background:white;width:500px;height:90px; border-radius:12px; box-shadow: 2px 4px 6px 2px rgba(0, 0, 0, 0.3);margin:8% 0 0 20%"><p style="font-size:100px; color: yellow">Hello World!</p></div> --}}
 
 </div>
 </body>
