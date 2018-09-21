@@ -33,7 +33,7 @@ Do the following if you're using your customized build of modernizr (http://www.
 <script type="text/javascript" src="public/respond.min.js"></script>
 <script type="text/javascript" src="public/index.js"></script>
 </head>
-<body>
+<body onLoad="slider1()">
 <div class="gridContainer clearfix">
     <div id="sidebar">
 	  <div id="side-slider">
@@ -71,7 +71,7 @@ Do the following if you're using your customized build of modernizr (http://www.
 				<div style="margin-top:35%; width:100%; font-family:'AvenirNextHeavyItalic'; font-size:5em"><p>Trust The Process</p></div>
 				<div style="margin-top:1%; margin-bottom:7%; line-height:2em; width:100%; font-family:'AvenirNextUltraLt';font-size:1.6em">
 					<p>Set your goal and go for it. Life is a learning process.
-						<br>We all will get there eventually.</p></div>
+						<br>We all get there eventually.</p></div>
 				<a href="https://github.com/Nickchen2016" target="_blank">
 					<div id= "github">
 						<img id="gitcat" src="public/img/gitwhite.png"/>
@@ -86,14 +86,14 @@ Do the following if you're using your customized build of modernizr (http://www.
 					<form id="contact-form" style="height:80%;vertical-align: middle" method="POST" action="send">
 						<h3 id="error1" style='margin-left:8px; color:red'>Enter a valid email please!</h3><br><div id="email1"><input id="contact-email" style="width:90%" type="email" name="email" placeholder="Keep in touch with your E-mail"></div>
 						<h3 id="error2" style='margin-left:8px; color:red'>Type Something!</h3><br><div id="email2"><textarea id="contact-msg" style="height: 100%; width:90%" type="text" name="message" placeholder="Please include your name in the message"></textarea></div>
-						<div style="width:100%;display:flex;justify-content:center"><button id="emailButton" type="button"><p style="margin-top:6%">Send</p></button></div>
+						<div style="width:100%;display:flex;justify-content:center"><button id="emailButton" type="button"><p style="margin-top:5%">Send</p></button></div>
 					</form>
 				</div>
 			</div>
         </div>
         <div id="bullets">
          <ul>
-        	<li><span id="s1" onclick="slider1(this)"></span></li>
+        	<li><span id="s1" onclick="slider1()"></span></li>
             <li><span id="s2" onclick="slider2(this)"></span></li>
             <li><span id="s3" onclick="slider3(this)"></span></li>
          </ul>
@@ -141,11 +141,11 @@ Do the following if you're using your customized build of modernizr (http://www.
 			<section>
 	
 				<div style="width:100%;height:75%">
-					<div style="margin:6% 15%;width:78%;height:80%"><img class="talkImg" src="public/img/chat.png"></div>
+					<div style="margin:5% 15%;width:78%"><img class="talkImg" src="public/img/chat.png"></div>
 				</div>
-				<div style="position:absolute;bottom:0px;width:100%;height:22%;background:white">
+				<div style="position:absolute;bottom:0px;width:100%;height:25%;background:white">
 					<div style="display:flex;flex-wrap:wrap;margin-top:1%;margin-left:15%">
-						<div style="width:500px">
+						<div style="width:550px">
 							<p style="font-family:AvenirNextBoldItalic;color:black;font-size:2.8em;margin-top:1%;margin-bottom:.5%">Under the hood of online chat</p>
 						</div>
 						<div style="display:flex;width:300px; height:40px; font-family:AvenirNextBold;font-size:1.2em;margin-bottom:1%">
@@ -170,19 +170,22 @@ Do the following if you're using your customized build of modernizr (http://www.
 			<section>
 
 				<div style="width:100%;height:75%">
-					<div style="margin:4% auto;width:88%;height:80%"><img class="talkImg" src="public/img/ec3.png"></div>
+					<div style="margin:4% 12%;width:82%"><img class="talkImg" src="public/img/ec3.png"></div>
 				</div>
-				<div style="position:absolute;bottom:0px;width:100%;height:22%;background:white">
+				<div style="position:absolute;bottom:0px;width:100%;height:25%;background:white">
 					<div style="display:flex;flex-wrap:wrap;margin-top:1%;margin-left:15%">
-						<div style="width:500px">
+						<div style="width:470px">
 							<p style="font-family:AvenirNextBoldItalic;color:black;font-size:2.8em;margin-top:.5%;margin-bottom:.5%">A funny way of navigating</p>
 						</div>
-						<div style="display:flex;width:300px; height:40px; font-family:AvenirNextBold;font-size:1.2em;margin-bottom:1%">
+						<div style="display:flex;width:360px; height:40px; font-family:AvenirNextBold;font-size:1.2em;margin-bottom:1%">
 							<a href="https://www.youtube.com/watch?v=y24Rw-SWyMI" target="_blank" id="knowMore">
 								<div style="width:40px">
 									<img style="margin-top:4px" src="public/img/play.png">
 								</div>
 								<p style="width:60px;margin-top:14%;margin-left:-6%">More</p>
+							</a>
+							<a href="https://chrome.google.com/webstore/detail/speak-out/pncollhcmilogpggdbibckiolebhnafl?hl=en" target="_blank" id="deployExpo">
+								<p style="margin-top:10%;width:140px;color: rgb(194,181,155)">Sample on <span style="color: white">Expo</span></p>
 							</a>
 							<a href="https://github.com/Mr-Chen-Alliance/emoji-compass" target="_blank" >
 								<div style="width:40px;height:40px">

@@ -1,17 +1,16 @@
 function toggleSidebar() {
-  // ref.classList.toggle('active');
   document.getElementById('toggle-btn').classList.toggle('active');
   document.getElementById('sidebar').classList.toggle('active');
   document.getElementById('screen-side').classList.toggle('active');
   document.getElementById('logo').classList.toggle('active');
   }
 
-function slider1(ref) {
+function slider1() {
   document.getElementById('s2').classList.remove('active');
   document.getElementById('mini-slider').classList.remove('active2');
   document.getElementById('s3').classList.remove('active');
   document.getElementById('mini-slider').classList.remove('active3');
-  ref.classList.add('active');
+  document.getElementById('s1').classList.add('active');
   document.getElementById('mini-slider').classList.add('active1');
 } 
 
