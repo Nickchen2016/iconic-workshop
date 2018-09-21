@@ -274,7 +274,7 @@ img, object, embed, video {
 	display: block;
 	position: fixed;
 	width: 100%;
-	left: 35px;
+	left: 0px;
 	bottom: 25px;
 	transform: translateX(0);
 	transition: transform 500ms;
@@ -289,8 +289,7 @@ img, object, embed, video {
   background:black;
   width:40px;
   height:6px;
-  margin:7px 0px;
-  cursor:pointer;
+  margin:7px 30px;
   transition:transform 300ms;
 }
 #toggle-btn.active span:nth-child(1) {
@@ -303,6 +302,9 @@ img, object, embed, video {
 #toggle-btn.active span:nth-child(3) {
   top:-13px;
   transform:rotate(-45deg);
+}
+#burgerBox {
+	width:110px;height:10%;cursor:pointer
 }
 
 #screen-side {
@@ -551,8 +553,9 @@ body ::selection {
 	margin-left:10%
 }
 
-.ecImg1 {
-	margin-top:30%;margin-left:20%
+.talkImg {
+	display:block;
+	margin: auto
 }
 
 #knowMore {
@@ -627,6 +630,12 @@ input:-webkit-autofill, textarea:-webkit-autofill {
 	border-radius: 50px;
 	font-family: 'AvenirNextHeavyItalic';
 	font-size: 2em;
+	cursor: pointer;
+}
+#emailButton:focus {
+	outline:0;
+	-webkit-box-shadow: none;
+          	box-shadow: none;
 }
 
 }

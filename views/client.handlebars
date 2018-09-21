@@ -80,12 +80,12 @@ Do the following if you're using your customized build of modernizr (http://www.
 				</a>
 			</div
 			><div id="mini3">
-				<div id="contact" style="margin-top:18%;width:78%;height:68%;margin-left:11%">
-					<p style="font-family:'AvenirNextHeavyItalic';font-size:5em;height:15%;margin-bottom:8%">Write Me</p>
+				<div id="contact" style="margin-top:17%;width:78%;height:68%;margin-left:11%">
+					<p style="font-family:'AvenirNextHeavyItalic';font-size:5em;height:15%;margin-bottom:6%">Write Me</p>
 
 					<form id="contact-form" style="height:80%;vertical-align: middle" method="POST" action="send">
-						<h3 id="error1" style='margin-left:8px; color:red'>Enter a valid email please!</h3><br><div id="email1"><input id="contact-email" style="width:90%" type="email" name="email" placeholder="Enter Your email address"></div>
-						<h3 id="error2" style='margin-left:8px; color:red'>Type Something!</h3><br><div id="email2"><textarea id="contact-msg" style="height: 100%; width:90%" type="text" name="message" placeholder="Your Message"></textarea></div>
+						<h3 id="error1" style='margin-left:8px; color:red'>Enter a valid email please!</h3><br><div id="email1"><input id="contact-email" style="width:90%" type="email" name="email" placeholder="Keep in touch with your E-mail"></div>
+						<h3 id="error2" style='margin-left:8px; color:red'>Type Something!</h3><br><div id="email2"><textarea id="contact-msg" style="height: 100%; width:90%" type="text" name="message" placeholder="Please include your name in the message"></textarea></div>
 						<div style="width:100%;display:flex;justify-content:center"><button id="emailButton" type="button"><p style="margin-top:6%">Send</p></button></div>
 					</form>
 				</div>
@@ -107,11 +107,11 @@ Do the following if you're using your customized build of modernizr (http://www.
   	<div class="wrap">
 		<div class="slider">
 			<section>
-				<div style="display:flex;width:100%;height:70%">
+				<div style="display:flex;width:100%;height:75%">
 					<div class="so1"><img class="soImg1" src="public/img/so1.png"></div>
 					<div class="so2"><img class="soImg2" src="public/img/so2.png"></div>
 				</div>
-				<div style="position:absolute;width:100%;height:30%;background:white">
+				<div style="position:absolute;bottom:0px;width:100%;height:25%;background:white">
 					<div style="display:flex;flex-wrap:wrap;margin-top:1%;margin-left:15%">
 						<div style="width:550px">
 							<p style="font-family:AvenirNextBoldItalic;color:black;font-size:2.8em;margin-top:.5%;margin-bottom:.5%">Instant reading, faster knowing</p>
@@ -140,13 +140,13 @@ Do the following if you're using your customized build of modernizr (http://www.
 			</section>
 			<section>
 	
-				<div style="display:flex;width:100%;height:70%">
-					<div style="margin-top:9%;width:76%;margin-left:15%;margin-right:auto"><img class="talkImg" src="public/img/chat.png"></div>
+				<div style="width:100%;height:75%">
+					<div style="margin:6% 15%;width:78%;height:80%"><img class="talkImg" src="public/img/chat.png"></div>
 				</div>
-				<div style="position:absolute;width:100%;height:30%;background:white">
+				<div style="position:absolute;bottom:0px;width:100%;height:22%;background:white">
 					<div style="display:flex;flex-wrap:wrap;margin-top:1%;margin-left:15%">
 						<div style="width:500px">
-							<p style="font-family:AvenirNextBoldItalic;color:black;font-size:2.8em;margin-top:.5%;margin-bottom:.5%">The beauty of video chat</p>
+							<p style="font-family:AvenirNextBoldItalic;color:black;font-size:2.8em;margin-top:1%;margin-bottom:.5%">Under the hood of online chat</p>
 						</div>
 						<div style="display:flex;width:300px; height:40px; font-family:AvenirNextBold;font-size:1.2em;margin-bottom:1%">
 							<a href="https://www.youtube.com/watch?v=y24Rw-SWyMI" target="_blank" id="knowMore">
@@ -169,10 +169,10 @@ Do the following if you're using your customized build of modernizr (http://www.
 			</section>
 			<section>
 
-				<div style="display:flex;width:100%;height:70%">
-					<div style="margin-top:5%;width:80%;margin-left:15%;margin-right:auto"><img class="talkImg" src="public/img/ec3.png"></div>
+				<div style="width:100%;height:75%">
+					<div style="margin:4% auto;width:88%;height:80%"><img class="talkImg" src="public/img/ec3.png"></div>
 				</div>
-				<div style="position:absolute;width:100%;height:30%;background:white">
+				<div style="position:absolute;bottom:0px;width:100%;height:22%;background:white">
 					<div style="display:flex;flex-wrap:wrap;margin-top:1%;margin-left:15%">
 						<div style="width:500px">
 							<p style="font-family:AvenirNextBoldItalic;color:black;font-size:2.8em;margin-top:.5%;margin-bottom:.5%">A funny way of navigating</p>
@@ -197,7 +197,7 @@ Do the following if you're using your customized build of modernizr (http://www.
 			</section>
 			<section>
 
-				<h2>New Project is on it's way...</h2>
+				<h2>Realax, it's on the way...</h2>
 			</section>
 		</div>
 
@@ -255,14 +255,15 @@ Do the following if you're using your customized build of modernizr (http://www.
 		<a href="views/index.handlebars"><img style="margin:1% 1.5%" src="public/img/logo.png" ></a>
   </div>
 
-  <div id="toggle-btn" onclick="toggleSidebar(this)">
-	<div>
+  <div id="toggle-btn">
+	<div id="burgerBox" onclick="toggleSidebar()">
         <span></span>
         <span></span>
 		<span></span>
 	</div>
   </div>
-  {{!-- <div style="position: absolute;z-index:5;background:white;width:500px;height:90px; border-radius:12px; box-shadow: 2px 4px 6px 2px rgba(0, 0, 0, 0.3);margin:8% 0 0 20%"><p style="font-size:100px; color: yellow">Hello World!</p></div> --}}
+
+{{!-- <div style="width:500px;height:80px"><p style="font-size:1.6em; color: yellow">Hello World!</p></div> --}}
 
 </div>
 </body>

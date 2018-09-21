@@ -1,5 +1,6 @@
-function toggleSidebar(ref) {
-  ref.classList.toggle('active');
+function toggleSidebar() {
+  // ref.classList.toggle('active');
+  document.getElementById('toggle-btn').classList.toggle('active');
   document.getElementById('sidebar').classList.toggle('active');
   document.getElementById('screen-side').classList.toggle('active');
   document.getElementById('logo').classList.toggle('active');
