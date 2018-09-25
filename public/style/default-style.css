@@ -24,8 +24,8 @@
 /******* pagination ********/
 .pagination {
   position: absolute;
-  left: 1.5%;
-  top: 30%;
+  left: 20px;
+  top: 18vw;
   z-index: 1;
   list-style: none;
   margin: 0;

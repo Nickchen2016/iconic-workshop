@@ -272,14 +272,14 @@ img, object, embed, video {
 	float: left;
 	display: block;
 	position: fixed;
-	width: 100%;
-	left: 0px;
-	bottom: 25px;
+	width: 10%;
+	left: 5px;
+	bottom: 22px;
 	transform: translateX(0);
-	transition: transform 500ms;
+	transition: transform 500ms
 }
 #toggle-btn.active {
-  transform:translateX(68%);
+  transform:translateX(680%);
   transition:transform 500ms;
 }
 #toggle-btn span {
@@ -288,7 +288,7 @@ img, object, embed, video {
   background:black;
   width:40px;
   height:6px;
-  margin:7px 30px;
+  margin:7px 32px;
   transition:transform 300ms;
 }
 #toggle-btn.active span:nth-child(1) {
@@ -303,7 +303,8 @@ img, object, embed, video {
   transform:rotate(-45deg);
 }
 #burgerBox {
-	width:110px;height:10%;cursor:pointer
+	margin-top:10%;
+	width:110px;height:45px;cursor:pointer
 }
 
 #screen-side {
@@ -353,8 +354,7 @@ img, object, embed, video {
   height: 10%;
   clear: both;
   float: left;
-  top: -10%;
-  margin-left: 0;
+  top: -9%;
   width: 100%;
   display: block;
   position: relative;
@@ -605,17 +605,17 @@ input, textarea {
 }
 
 #email2 {
-	height:45%;margin-bottom:8%
+	height:45%;margin-bottom:7%
 }
 
 #email1::before {
-	content:''; margin-top: 3px;
+	content:''; margin-top: 5px;
 	width: 8px; height: 20px;
 	background: white;position: absolute
 }
 
 #email2::before {
-	content:''; margin-top: 3px;
+	content:''; margin-top: 5px;
 	width: 8px; height: 20px;
 	background: white;position: absolute
 }
@@ -637,7 +637,7 @@ input:-webkit-autofill, textarea:-webkit-autofill {
 	width: 150px; height: 50px;
 	border-radius: 50px;
 	font-family: 'AvenirNextHeavyItalic';
-	font-size: 2em;
+	font-size: 2.4em;
 	cursor: pointer;
 }
 #emailButton:focus {
