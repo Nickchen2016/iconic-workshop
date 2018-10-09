@@ -60,28 +60,557 @@ img, object, embed, video {
 }
 
 #screen-side {
-	clear: none;
-	float: left;
-	margin-left: 4.1666%;
-	width: 100%;
-	display: block;
-}
-
-#side-slider {
 	clear: both;
 	float: left;
 	margin-left: 0;
-	width: 100%;
 	display: block;
+	width: 100vw;
+	height: 100vh;
+	position:fixed;
+	background:white;
+	left:0px;
+	top:0px;
+	transform:translateX(0);
+	transition:transform 500ms;
+}
+#screen-side.active {
+	transform:translateX(100%);
+	transition:transform 500ms;
+}
+
+#sidebar {
+	clear: both;
+	float: left;
+	display: block;
+	position:fixed;
+	top:0px;
+	left:0px;
+	width:100%;
+	height:100vh;
+	transform:translateX(-100%);
+	transition:transform 500ms;
+  }
+  
+  #sidebar.active {
+	 transform:translateX(0);
+	 transition:transform 500ms;
+	 overflow:hidden;
+  }
+  
+#side-slider {
+	clear: both;
+	height: 100%;
+	margin: 0;
+  	float: left;
+  	width: 100%;
+  	display: block;
 }
 
 #footer {
+	height: 10%;
 	clear: both;
 	float: left;
-	margin-left: 0;
+	top: -9%;
 	width: 100%;
 	display: block;
+	position: relative;
+  }
+  #copyright {
+	margin-top: 6%;
+	text-align: center;
+	font-family: "AvenirNextHeavyItalic";
+	font-size: 1em;
+  }
+
+#logo {
+	clear: both;
+	float: left;
+	display: block;
+	position: fixed;
+	width: 100%;
+	left:4%;
+	top:2%;
+	transform: translateX(0);
+	transition: transform 500ms;
+  }
+  #logo.active {
+	transform:translateX(100%);
+	transition:transform 500ms;
+  }
+  #logo-img {
+	width: 110px
+  }
+
+#toggle-btn {
+	clear: both;
+	float: right;
+	display: block;
+	position: fixed;
+	width: 12%;
+	right: 11%;
+	top: 3%;
 }
+#toggle-btn span {
+  position:relative;
+  display:block;
+  background:black;
+  width:32px;
+  height:5px;
+  margin:5px 32px;
+  transition:transform 300ms;
+}
+#toggle-btn.active span:nth-child(1) {
+  top:10px;
+  transform:rotate(45deg);
+}
+#toggle-btn.active span:nth-child(2) {
+  opacity:0;
+}
+#toggle-btn.active span:nth-child(3) {
+  top:-10px;
+  transform:rotate(-45deg);
+}
+#burgerBox {
+	width:50px;height:50px;margin:-43px 0 0 23px;
+	border-radius: 50%;
+	cursor:pointer
+}
+#burgerBox:hover {
+	background:rgba(255,255,255,.2);
+}
+.slider h2{
+	font-family: "AvenirNextHeavyItalic";
+	font-size:48px;
+	color: black;
+	text-align: center;
+	margin-top:50%
+}
+
+/*------------------------------*/
+
+.so1 {
+	z-index:0;margin-top:40%;
+	margin-left: 2%;width:55%;position: absolute;
+}
+.so2 {
+	margin-top:22%;margin-left:40%
+}
+.io {
+	width:100%;margin-top:24%
+}
+.ec {
+	margin-top:28%;width:100%
+}
+
+.description-box {
+	position:absolute;bottom:0px;z-index:100;
+	width:100%;min-height:20%;
+	background:white;border-top: 1px solid #E6E7E8
+}
+.title-icon-box {
+	display:flex;flex-wrap:wrap;margin-top:.5%;margin-left:4%
+}
+.title-length {
+	min-width:450px; margin-right:4%
+}
+.title-font {
+	font-family:"AvenirNextBoldItalic";color:black;font-size:6.2vw;margin-top:1%;margin-bottom:1%
+}
+.icon-box {
+	display:flex;min-width:170px; height:40px; font-family:"AvenirNextBold";font-size:1.2em;margin-bottom:1%
+}
+.description {
+	width:92%;font-family:"AvenirNextUltraLt";color:black;font-size:1.2em; line-height: 1.3;margin-left:4%;margin-bottom:3%
+}
+#knowMore {
+	width: 85px; height: 35px;margin-right:4vw;
+	display: flex;
+	border-radius: 30px; background: black;
+	text-align: center;
+	cursor: pointer;
+}
+#knowMore:hover {
+	background: rgba(0,0,0,.6)
+}
+
+#addChrome {
+	width: 130px; height: 35px; margin-right:4vw;
+	border-radius: 30px; background:rgb(238,58,57);
+	text-align: center;
+	cursor: pointer;
+}
+#addChrome:hover {
+	background:rgb(255,102,102)
+}
+
+#deployExpo {
+	width: 130px; height: 35px; margin-right:4vw;
+	border-radius: 40px; background:rgb(102,0,255);
+	text-align: center;
+	cursor: pointer;
+}
+#deployExpo:hover {
+	background:rgba(102,0,255,.8)
+}
+.watch-more {
+	width:40px
+}
+.play {
+	width:28px;height:28px;margin-top:3.3px;
+}
+.git-icon {
+	width:35px;height:35px
+}
+.git-icon:hover {
+	opacity: 0.6
+}
+.slider h2{
+	font-family: "AvenirNextHeavyItalic";
+	font-size:28px;
+	color: black;
+	text-align: center;
+	margin-top:60%
+}
+/*------------------------------*/
+#mini-slider {
+	clear: both;
+  	float: left;
+  	width: 100%;
+	height: 100%;
+	white-space: nowrap;
+	transform:translateX(0);
+	transition:transform 500ms;
+}
+
+#mini-slider > * {
+	display: inline-block;
+	vertical-align: top;
+	width: 100%;
+	height: 100%	
+}
+
+#mini1 {
+	background-image: url('./img/back.jpg');
+	background-repeat: no-repeat;
+	background-size:cover;
+	text-align:center;
+}
+
+#mini2 {
+
+	background-image: url('./img/back2.jpg');
+	background-repeat: no-repeat;
+	background-size:cover;
+	text-align:center  
+}
+
+#mini2 a {
+	color: white
+}
+
+#mini2 a p:hover {
+	color: rgba(255,255,255,.2)
+}
+
+#mini3 {
+	background-image: url('./img/back3.jpg');
+	background-repeat: no-repeat;
+  	background-size:cover;
+}
+
+#mini-slider.active1 {
+	transform:translateX(   0%);
+	transition:transform 500ms;
+}
+
+#mini-slider.active2 {
+	transform:translateX(-100%);
+	transition:transform 500ms;
+}
+
+#mini-slider.active3 {
+	transform:translateX(-200%);
+	transition:transform 500ms;
+}
+
+#bullets {
+	z-index: 1;
+	top:-18%;
+	clear: both;
+  	float: left;
+  	display: block;
+	position:relative;
+	width: 100%;
+	text-align: center;
+}
+#bullets li {
+	list-style-type: none;
+	display: inline-block;
+	margin: 0 20px;
+}
+
+#bullets li span {
+	position:relative;
+  	display:block;
+  	width:15px;
+  	height:15px;
+	border:1px solid white;
+	border-radius: 50%;
+  	-webkit-border-radius: 50%;
+	margin:30px 0px;
+  	cursor:pointer;
+}
+
+#bullets li span:hover {
+	background:white !important;
+}
+#s1.active {
+	background:white;
+}
+
+#s2.active {
+	background:white;
+}
+
+#s3.active {
+	background:white;
+}
+
+#info-bar {
+	clear: both;
+  	display: block;
+	position:relative;
+	margin-left: auto; 
+	margin-right: auto; 
+	width:300px;
+	height:65px;
+	top:25%;
+	font-family:'AvenirNextUltraLt'; 
+	font-size:1.6em; 
+	color:white;
+}
+
+#github {
+	clear: both;
+	display: inline-flex;
+	position:relative;
+	width: 268px; height: 60px; 
+	background-color: rgb(0,0,0);
+	cursor: pointer; margin-top:7%
+}
+
+#gitcat {
+	margin: 3%;
+	width: 17%
+}
+
+#control {
+	height:65px;
+	width:32px;
+	float:left;
+	display: block;
+	position:relative;
+}
+
+#up, #down {
+	height:29.5px;
+	width: 26px;
+	float: left;
+	display:block;
+	position:relative;
+	border-right:6px solid rgb(35,31,32);
+	background: rgb(0,0,255);
+	cursor: pointer;
+}
+
+#up span {
+	margin-top:16px;
+	margin-left:7px;
+	transform: rotate(135deg);
+}
+
+#down span {
+	margin-left:7px;
+	transform: rotate(-45deg);
+}
+
+#up span, #down span {
+	float: left;
+	display:block;
+	position:relative;
+	height:13px;
+	width:13px;
+	box-shadow: -4px 4px 0 rgba(255,255,255,1);
+}
+
+#up:hover span, #down:hover span {
+	box-shadow: -4px 4px 0 rgba(255,255,255,.2);
+}
+
+#up {
+	border-bottom:3px solid rgb(35,31,32);
+
+}
+
+#down {
+	border-top:3px solid rgb(35,31,32);
+}
+
+#info {
+	overflow: hidden;
+	height:100%;
+	width:268px;
+	float: left;
+	display: block;
+	position:relative;
+	background: rgba(0,0,0,0.2)
+}
+
+#icon {
+	height:100%;
+	width: 63px;
+	float: left;
+	display:block;
+	position: relative;
+	align-content: center;
+	background:rgb(0,51,255);
+}
+
+#icon1 {
+	transform:translateY(0);
+	transition:transform 500ms ease-in;
+}
+
+#icon1.active {
+	transform:translateY(-100%);
+  	transition:transform 500ms ease-out;
+}
+
+#i1 {
+	margin-left:-8%;
+	margin-top:12%;
+}
+
+#i2 {
+	transform: translateY(145%);
+	margin-left:-70%;
+}
+
+#triangle {
+	margin-top:8%;
+	margin-left:21%;
+	width: 1px;
+  	height: 3px;
+  	border-bottom: solid 20px rgb(0,0,255);
+  	border-left: solid 15px transparent;
+	border-right: solid 15px transparent;
+	transform: rotate(90deg);  
+}
+
+#descrip {
+	cursor: pointer;
+	transform:translateY(0);
+	transition:transform 500ms ease-in;
+}
+
+#descrip a {color:white;}
+
+#descrip a:hover, #descrip:hover {
+	color: rgb(147,149,152);
+}
+
+#descrip.active {
+	transform:translateY(-68%);
+	transition:transform 500ms ease-out;
+}
+.mini-content {
+	margin-top:45%;width:100%
+}
+.mini-title {
+	font-family:'AvenirNextHeavyItalic';font-size:2.9em
+}
+.mini-description {
+	margin-top:1%;line-height:2em;font-family:'AvenirNextUltraLt'; font-size:1em
+}
+input, textarea {
+	width: 100%;margin-left: 30px;
+	font-family:'AvenirNextUltraLt'; font-size:1em;
+	color: white;
+	outline: none;
+	border: none;
+	background: transparent
+}
+
+#email1 {
+	height:14%;margin-bottom:5%
+}
+
+#email2 {
+	height:45%;margin-bottom:7%
+}
+
+#email1::before {
+	content:''; margin-top: 1px;
+	width: 6px; height: 17px;
+	background: white;position: absolute
+}
+
+#email2::before {
+	content:''; margin-top: 1px;
+	width: 6px; height: 17px;
+	background: white;position: absolute
+}
+
+input::placeholder, textarea::placeholder {
+	color:white
+}
+
+input:focus, textarea:focus {
+	background: rgba(0,0,0,.1)
+}
+
+input:-webkit-autofill, textarea:-webkit-autofill {
+	transition: background-color 5000s ease-in-out 0s;
+    -webkit-text-fill-color: white !important;
+}
+
+#emailButton {
+	width: 125px; height: 42px;
+	border-radius: 50px;
+	font-family: 'AvenirNextHeavyItalic';
+	font-size: 2.4em;
+	cursor: pointer;
+}
+#emailButton:focus {
+	outline:0;
+	-webkit-box-shadow: none;
+          	box-shadow: none;
+}
+
+#feedback-box {
+	position:absolute;width:100%;margin-left:-6%;margin-top:-22%;
+	transform:translateY(0);
+	transition:transform 1000ms ease-in;
+	animation: opacity-out 1s;
+}
+#text-box {
+	width:290px;height:52px;
+}
+
+#feedback-box.active {
+	animation: opacity-showup 1.2s;
+	transform:translateY(122%);
+	transition:transform 800ms ease-in;
+}
+@keyframes opacity-showup {
+	0% { opacity: 0 }
+	100% { opacity: 1 }
+}
+@keyframes opacity-out {
+	0% { opacity: 1 }
+	100% { opacity: 0 }
+}
+
 
 
 
@@ -98,22 +627,553 @@ img, object, embed, video {
 	clear: both;
 	float: left;
 	margin-left: 0;
-	width: 100%;
 	display: block;
+
+	width: 100vw;
+	height: 100vh;
+	position:fixed;
+	background:white;
+	left:0px;
+	top:0px;
+	transform:translateX(0);
+	transition:transform 500ms;
 }
+#screen-side.active {
+	transform:translateX(100%);
+	transition:transform 500ms;
+}
+
+#sidebar {
+	clear: both;
+	float: left;
+	display: block;
+	position:fixed;
+	top:0px;
+	left:0px;
+	width:100%;
+	height:100vh;
+	transform:translateX(-100%);
+	transition:transform 500ms;
+  }
+  
+  #sidebar.active {
+	 transform:translateX(0);
+	 transition:transform 500ms;
+	 overflow:hidden;
+  }
+  
 #side-slider {
 	clear: both;
-	float: left;
-	margin-left: 0;
-	width: 100%;
-	display: block;
+	height: 100%;
+	margin: 0;
+  	float: left;
+  	width: 100%;
+  	display: block;
 }
+
 #footer {
+	height: 10%;
 	clear: both;
 	float: left;
-	margin-left: 0;
+	top: -9%;
 	width: 100%;
 	display: block;
+	position: relative;
+  }
+  #copyright {
+	margin-top: 5%;
+	margin-right: 1.2%;
+	text-align: right;
+	font-family: "AvenirNextHeavyItalic";
+	font-size: 1em;
+  }
+
+#logo {
+	clear: both;
+	float: left;
+	display: block;
+	position: fixed;
+	width: 100%;
+	left:3%;
+	top:1%;
+	transform: translateX(0);
+	transition: transform 500ms;
+  }
+  #logo.active {
+	transform:translateX(100%);
+	transition:transform 500ms;
+  }
+  #logo-img {
+	width: 135px
+  }
+
+#toggle-btn {
+	clear: both;
+	float: right;
+	display: block;
+	position: fixed;
+	width: 10%;
+	right: 5%;
+	top: 4%;
+}
+#toggle-btn span {
+  position:relative;
+  display:block;
+  background:black;
+  width:32px;
+  height:5px;
+  margin:5px 32px;
+  transition:transform 300ms;
+}
+#toggle-btn.active span:nth-child(1) {
+  top:10px;
+  transform:rotate(45deg);
+}
+#toggle-btn.active span:nth-child(2) {
+  opacity:0;
+}
+#toggle-btn.active span:nth-child(3) {
+  top:-10px;
+  transform:rotate(-45deg);
+}
+#burgerBox {
+	width:50px;height:50px;margin:-43px 0 0 23px;
+	border-radius: 50%;
+	cursor:pointer
+}
+#burgerBox:hover {
+	background:rgba(255,255,255,.2);
+}
+.slider h2{
+	font-family: "AvenirNextHeavyItalic";
+	font-size:48px;
+	color: black;
+	text-align: center;
+	margin-top:40%
+}
+/*------------------------------*/
+
+.so1 {
+	z-index:0;margin-top:28%;
+	margin-left: 5%;width:55%;position: absolute;
+}
+.so2 {
+	margin-top:11%;margin-left:40%
+}
+.io {
+	width:100%;margin-top:12%
+}
+.ec {
+	margin-top:15%;width:100%
+}
+
+.description-box {
+	position:absolute;bottom:0px;
+	width:100%;min-height:20%;
+	background:white;border-top: 1px solid #E6E7E8
+}
+.title-icon-box {
+	display:flex;flex-wrap:wrap;margin-top:.5%;margin-left:4%
+}
+.title-length {
+	min-width:450px; margin-right:4%
+}
+.title-font {
+	font-family:"AvenirNextBoldItalic";color:black;font-size:2.6em;margin-top:1%;margin-bottom:1%
+}
+.icon-box {
+	display:flex;min-width:170px; height:40px; font-family:"AvenirNextBold";font-size:1.2em;margin-bottom:1%
+}
+.description {
+	width:92%;font-family:"AvenirNextUltraLt";color:black;font-size:1.4em; line-height: 1.3;margin-left:4%;margin-bottom:3%
+}
+#knowMore {
+	width: 100px; height: 40px;margin-right:10%;
+	display: flex;
+	border-radius: 40px; background: black;
+	text-align: center;
+	cursor: pointer;
+}
+#knowMore:hover {
+	background: rgba(0,0,0,.6)
+}
+
+#addChrome {
+	width: 220px; height: 40px; margin-right:10%;
+	border-radius: 40px; background:rgb(238,58,57);
+	text-align: center;
+	cursor: pointer;
+}
+#addChrome:hover {
+	background:rgb(255,102,102)
+}
+
+#deployExpo {
+	width: 220px; height: 40px; margin-right:10%;
+	border-radius: 40px; background:rgb(102,0,255);
+	text-align: center;
+	cursor: pointer;
+}
+#deployExpo:hover {
+	background:rgba(102,0,255,.8)
+}
+.watch-more {
+	width:40px
+}
+.play {
+	width:32px;height:32px;margin-top:4px;
+}
+.git-icon {
+	width:40px;height:40px
+}
+.git-icon:hover {
+	opacity: 0.6
+}
+.slider h2{
+	font-family: "AvenirNextHeavyItalic";
+	font-size:36px;
+	color: black;
+	text-align: center;
+	margin-top:45%
+}
+/*------------------------------*/
+#mini-slider {
+	clear: both;
+  	float: left;
+  	width: 100%;
+	height: 100%;
+	white-space: nowrap;
+	transform:translateX(0);
+	transition:transform 500ms;
+}
+
+#mini-slider > * {
+	display: inline-block;
+	vertical-align: top;
+	width: 100%;
+	height: 100%	
+}
+
+#mini1 {
+	background-image: url('./img/back.jpg');
+	background-repeat: no-repeat;
+	background-size:cover;
+	text-align:center;
+}
+
+#mini2 {
+
+	background-image: url('./img/back2.jpg');
+	background-repeat: no-repeat;
+	background-size:cover;
+	text-align:center  
+}
+
+#mini2 a {
+	color: white
+}
+
+#mini2 a p:hover {
+	color: rgba(255,255,255,.2)
+}
+
+#mini3 {
+	background-image: url('./img/back3.jpg');
+	background-repeat: no-repeat;
+  	background-size:cover;
+}
+
+#mini-slider.active1 {
+	transform:translateX(   0%);
+	transition:transform 500ms;
+}
+
+#mini-slider.active2 {
+	transform:translateX(-100%);
+	transition:transform 500ms;
+}
+
+#mini-slider.active3 {
+	transform:translateX(-200%);
+	transition:transform 500ms;
+}
+
+#bullets {
+	z-index: 1;
+	top:-15%;
+	clear: both;
+  	float: left;
+  	display: block;
+	position:relative;
+	width: 100%;
+	text-align: center;
+}
+#bullets li {
+	list-style-type: none;
+	display: inline-block;
+	margin: 0 20px;
+}
+
+#bullets li span {
+	position:relative;
+  	display:block;
+  	width:15px;
+  	height:15px;
+	border:1px solid white;
+	border-radius: 50%;
+  	-webkit-border-radius: 50%;
+	margin:30px 0px;
+  	cursor:pointer;
+}
+
+#bullets li span:hover {
+	background:white !important;
+}
+#s1.active {
+	background:white;
+}
+
+#s2.active {
+	background:white;
+}
+
+#s3.active {
+	background:white;
+}
+
+#info-bar {
+	clear: both;
+  	display: block;
+	position:relative;
+	margin-left: auto; 
+	margin-right: auto; 
+	width:300px;
+	height:65px;
+	top:25%;
+	font-family:'AvenirNextUltraLt'; 
+	font-size:1.6em; 
+	color:white;
+}
+
+#github {
+	clear: both;
+	display: inline-flex;
+	position:relative;
+	width: 268px; height: 60px; 
+	background-color: rgb(0,0,0);
+	cursor: pointer; margin-top:7%
+}
+
+#gitcat {
+	margin: 3%;
+	width: 17%
+}
+
+#control {
+	height:65px;
+	width:32px;
+	float:left;
+	display: block;
+	position:relative;
+}
+
+#up, #down {
+	height:29.5px;
+	width: 26px;
+	float: left;
+	display:block;
+	position:relative;
+	border-right:6px solid rgb(35,31,32);
+	background: rgb(0,0,255);
+	cursor: pointer;
+}
+
+#up span {
+	margin-top:16px;
+	margin-left:7px;
+	transform: rotate(135deg);
+}
+
+#down span {
+	margin-left:7px;
+	transform: rotate(-45deg);
+}
+
+#up span, #down span {
+	float: left;
+	display:block;
+	position:relative;
+	height:13px;
+	width:13px;
+	box-shadow: -4px 4px 0 rgba(255,255,255,1);
+}
+
+#up:hover span, #down:hover span {
+	box-shadow: -4px 4px 0 rgba(255,255,255,.2);
+}
+
+#up {
+	border-bottom:3px solid rgb(35,31,32);
+
+}
+
+#down {
+	border-top:3px solid rgb(35,31,32);
+}
+
+#info {
+	overflow: hidden;
+	height:100%;
+	width:268px;
+	float: left;
+	display: block;
+	position:relative;
+	background: rgba(0,0,0,0.2)
+}
+
+#icon {
+	height:100%;
+	width: 63px;
+	float: left;
+	display:block;
+	position: relative;
+	align-content: center;
+	background:rgb(0,51,255);
+}
+
+#icon1 {
+	transform:translateY(0);
+	transition:transform 500ms ease-in;
+}
+
+#icon1.active {
+	transform:translateY(-100%);
+  	transition:transform 500ms ease-out;
+}
+
+#i1 {
+	margin-left:-8%;
+	margin-top:12%;
+}
+
+#i2 {
+	transform: translateY(145%);
+	margin-left:-70%;
+}
+
+#triangle {
+	margin-top:8%;
+	margin-left:21%;
+	width: 1px;
+  	height: 3px;
+  	border-bottom: solid 20px rgb(0,0,255);
+  	border-left: solid 15px transparent;
+	border-right: solid 15px transparent;
+	transform: rotate(90deg);  
+}
+
+#descrip {
+	cursor: pointer;
+	transform:translateY(0);
+	transition:transform 500ms ease-in;
+}
+
+#descrip a {color:white;}
+
+#descrip a:hover, #descrip:hover {
+	color: rgb(147,149,152);
+}
+
+#descrip.active {
+	transform:translateY(-68%);
+	transition:transform 500ms ease-out;
+}
+.mini-content {
+	margin-top:33%;width:100%
+}
+.mini-title {
+	font-family:'AvenirNextHeavyItalic';font-size:4.6em
+}
+.mini-description {
+	margin-top:1%;line-height:2em;font-family:'AvenirNextUltraLt'; font-size:1.5em
+}
+input, textarea {
+	width: 100%;margin-left: 30px;
+	font-family:'AvenirNextUltraLt'; font-size:1.5em;
+	color: white;
+	outline: none;
+	border: none;
+	background: transparent
+}
+
+#email1 {
+	height:14%;margin-bottom:5%
+}
+
+#email2 {
+	height:45%;margin-bottom:7%
+}
+
+#email1::before {
+	content:''; margin-top: 4px;
+	width: 7px; height: 18px;
+	background: white;position: absolute
+}
+
+#email2::before {
+	content:''; margin-top: 4px;
+	width: 7px; height: 18px;
+	background: white;position: absolute
+}
+
+input::placeholder, textarea::placeholder {
+	color:white
+}
+
+input:focus, textarea:focus {
+	background: rgba(0,0,0,.1)
+}
+
+input:-webkit-autofill, textarea:-webkit-autofill {
+	transition: background-color 5000s ease-in-out 0s;
+    -webkit-text-fill-color: white !important;
+}
+
+#emailButton {
+	width: 125px; height: 42px;
+	border-radius: 50px;
+	font-family: 'AvenirNextHeavyItalic';
+	font-size: 2.4em;
+	cursor: pointer;
+}
+#emailButton:focus {
+	outline:0;
+	-webkit-box-shadow: none;
+          	box-shadow: none;
+}
+
+#feedback-box {
+	position:absolute;width:100%;margin-left:-6%;margin-top:-15%;
+	transform:translateY(0);
+	transition:transform 1000ms ease-in;
+	animation: opacity-out 1s;
+}
+#text-box {
+	width:320px;height:55px;
+}
+
+#feedback-box.active {
+	animation: opacity-showup 1.2s;
+	transform:translateY(122%);
+	transition:transform 800ms ease-in;
+}
+@keyframes opacity-showup {
+	0% { opacity: 0 }
+	100% { opacity: 1 }
+}
+@keyframes opacity-out {
+	0% { opacity: 1 }
+	100% { opacity: 0 }
 }
 
 }
@@ -153,7 +1213,6 @@ img, object, embed, video {
 	clear: both;
 	height: 100%;
 	margin: 0;
-	clear: both;
   	float: left;
   	width: 100%;
   	display: block;
@@ -224,7 +1283,7 @@ img, object, embed, video {
 
 #bullets {
 	z-index: 1;
-	top:-12%;
+	top:-14%;
 	clear: both;
   	float: left;
   	display: block;
@@ -273,8 +1332,8 @@ img, object, embed, video {
 	display: block;
 	position: fixed;
 	width: 10%;
-	left: 5px;
-	bottom: 22px;
+	left: 3px;
+	top: 89%;
 	transform: translateX(0);
 	transition: transform 500ms
 }
@@ -288,9 +1347,10 @@ img, object, embed, video {
   background:black;
   width:40px;
   height:6px;
-  margin:7px 32px;
+  margin-top:7px;
   transition:transform 300ms;
 }
+
 #toggle-btn.active span:nth-child(1) {
   top:13px;
   transform:rotate(45deg);
@@ -303,14 +1363,15 @@ img, object, embed, video {
   transform:rotate(-45deg);
 }
 #burgerBox {
-	margin-top:10%;
-	width:110px;height:45px;cursor:pointer
+	width:65px;height:65px;margin:-53px 0 0 18.5px;
+	border-radius: 50%;
+	cursor:pointer
 }
 
 #screen-side {
   clear: both;
   float: left;
-  width: 100wh;
+  width: 100vw;
   height: 100vh;
   display: block;
   position:fixed;
@@ -328,7 +1389,7 @@ img, object, embed, video {
 
 #logo {
   clear: both;
-  float: left;
+  float: left;z-index:1;
   display: block;
   position: fixed;
   width: 100%;
@@ -340,14 +1401,6 @@ img, object, embed, video {
 #logo.active {
   transform:translateX(68%);
   transition:transform 500ms;
-}
-
-#side-slider {
-  clear: both;
-  float: left;
-  margin-left: 0;
-  width: 100%;
-  display: block
 }
 
 #footer {
@@ -366,6 +1419,16 @@ img, object, embed, video {
   text-align: right;
   font-family: "AvenirNextHeavyItalic";
   font-size: 1.2em;
+}
+.mini-content {
+	margin-top:33%;width:100%
+}
+
+.mini-title {
+	font-family:'AvenirNextHeavyItalic';font-size:4.9em
+}
+.mini-description {
+	margin-top:1%;line-height:2em;font-family:'AvenirNextUltraLt'; font-size:1.8em
 }
 
 #info-bar {
@@ -388,7 +1451,7 @@ img, object, embed, video {
 	position:relative;
 	width: 268px; height: 60px; 
 	background-color: rgb(0,0,0);
-	cursor: pointer;
+	cursor: pointer; margin-top:7%
 }
 
 #gitcat {
@@ -520,26 +1583,23 @@ body::-moz-selection {
 	background: yellow;
 }
 
-body ::selection {
+body::selection {
 	background: yellow;
 }
 
 .so1 {
-	z-index:0;margin-top:10%;
-	margin-left: 15%;width:35%
+	z-index:0;margin-top:11%;
+	margin-left: 15%;width:35%;position: static
 }
 .so2 {
 	margin-top:2%;
-	width:45%
+	width:45%;margin-left:0;
 }
-
-.ec1 {
-	z-index:0;margin-top:18%;
-	margin-left: 15%;width:15%
+.io {
+	margin:5% 0 0 14%;width:84%
 }
-.ec2 {
-	margin-top:2%;
-	width:65%
+.ec {
+	margin:6vh 0 0 12%;width:82%
 }
 
 .soImg1 {
@@ -568,7 +1628,7 @@ body ::selection {
 }
 
 #addChrome {
-	width: 140px; height: 40px; margin-right:10%;
+	width: 220px; height: 40px; margin-right:10%;
 	border-radius: 40px; background:rgb(238,58,57);
 	text-align: center;
 	cursor: pointer;
@@ -578,17 +1638,13 @@ body ::selection {
 }
 
 #deployExpo {
-	width: 140px; height: 40px; margin-right:10%;
+	width: 220px; height: 40px; margin-right:10%;
 	border-radius: 40px; background:rgb(102,0,255);
 	text-align: center;
 	cursor: pointer;
 }
 #deployExpo:hover {
 	background:rgba(102,0,255,.8)
-}
-
-.icon:hover {
-	opacity: 0.6
 }
 
 input, textarea {
@@ -652,6 +1708,13 @@ input:-webkit-autofill, textarea:-webkit-autofill {
 	transition:transform 1000ms ease-in;
 	animation: opacity-out 1s;
 }
+#text-box {
+	width:320px;height:55px;
+}
+
+#logo-img {
+	width: 195px
+  }
 #feedback-box.active {
 	animation: opacity-showup 1.2s;
 	transform:translateY(100%);
@@ -666,4 +1729,36 @@ input:-webkit-autofill, textarea:-webkit-autofill {
 	100% { opacity: 0 }
 }
 
+.description-box {
+	position:absolute;bottom:0px;
+	width:100%;min-height:18%;
+	background:white;border-top: 1px solid #E6E7E8
+}
+.title-icon-box {
+	display:flex;flex-wrap:wrap;margin-top:.5%;margin-left:14%
+}
+.title-length {
+	min-width:450px; margin-right:4%
+}
+.title-font {
+	font-family:"AvenirNextBoldItalic";color:black;font-size:3em;margin-top:.5%;margin-bottom:.5%
+}
+.icon-box {
+	display:flex;min-width:170px; height:40px; font-family:"AvenirNextBold";font-size:1.2em;margin-bottom:.5%
+}
+.description {
+	width:80%;font-family:"AvenirNextUltraLt";color:black;font-size:1.5em; line-height: 1.3;margin-left:14%;margin-bottom:1.5%
+}
+.watch-more {
+	width:40px
+}
+.play {
+	width:32px;height:32px;margin-top:4px;
+}
+.git-icon {
+	width:40px;height:40px
+}
+.git-icon:hover {
+	opacity: 0.6
+}
 }

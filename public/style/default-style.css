@@ -22,6 +22,7 @@
 } */
 
 /******* pagination ********/
+@media only screen and (min-width: 769px) {
 .pagination {
   position: absolute;
   left: 20px;
@@ -75,15 +76,11 @@
 	font-family: "AvenirNextMedItalic";
 	font-size: 1.7em;
 }
-
-/* @media only screen and (max-width: 768px){
-    .slider h1{
-        font-size:50px;
-    }*/
-    .slider h2{
-        font-family: "AvenirNextHeavyItalic";
-        font-size:48px;
-        color: black;
-        text-align: center;
-        margin-top: 30%;
-    }
+.slider h2{
+	font-family: "AvenirNextHeavyItalic";
+	font-size:48px;
+	color: black;
+	text-align: center;
+	margin-top:30%
+}
+}

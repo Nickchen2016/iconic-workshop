@@ -10,6 +10,7 @@
 <meta name="description" content="iconic. Shortcut of iconic-workshop. I create app, extension & graphics" />
 <meta name="keywords" content="iconic, frontend, Javascript, graphic, design" />
 <title>iconic workshop</title>
+<link rel="fav icon" type="image/png" href="public/img/favicon.png">
 <link href="public/boilerplate.css" rel="stylesheet" type="text/css">
 <link href="public/style.css" rel="stylesheet" type="text/css">
 <link rel="stylesheet" type="text/css" href="public/style/reset.css">
@@ -35,13 +36,13 @@ Do the following if you're using your customized build of modernizr (http://www.
 </head>
 <body onLoad="slider1();feedback();">
 <div class="gridContainer clearfix">
-    <div id="sidebar">
+    <div id="sidebar" style="background:grey">
 	  <div id="side-slider">
 		<div id="mini-slider">
         	<div id="mini1">
-				<div style="margin-top:32%;width:100%;">
-						<p style="font-family:'AvenirNextHeavyItalic';font-size:4.9em;">icon+nick=iconic</p>
-						<p style="margin-top:1%;line-height:2em;font-family:'AvenirNextUltraLt'; font-size:1.8em">Hey! My name is Nick, this is my online portfolio. 
+				<div class="mini-content">
+						<p class="mini-title">icon+nick=iconic</p>
+						<p class="mini-description">Hey! My name is Nick, this is my online portfolio. 
 						<br>I am a full-stack developer. I make app.</p></div>
 				<div style="width:100%;margin-top:10%">
 							<div id="info-bar">
@@ -68,9 +69,8 @@ Do the following if you're using your customized build of modernizr (http://www.
 				</div>
 			</div
 			><div id="mini2">
-				<div style="margin-top:34%; width:100%; font-family:'AvenirNextHeavyItalic'; font-size:4.9em"><p>Trust The Process</p></div>
-				<div style="margin-top:1%; margin-bottom:7%; line-height:2em; width:100%; font-family:'AvenirNextUltraLt';font-size:1.8em">
-					<p>Set your goal and go for it. Life is a learning process.
+				<div class="mini-content"><p class="mini-title">Trust The Process</p>
+					<p class="mini-description">Set your goal and go for it. Life is a learning process.
 						<br>We all get there eventually.</p></div>
 				<a href="https://github.com/Nickchen2016" target="_blank">
 					<div id= "github">
@@ -81,7 +81,7 @@ Do the following if you're using your customized build of modernizr (http://www.
 			</div
 			><div id="mini3">
 				<div style="margin-top:17%;width:78%;height:500px;margin-left:11%">
-					<p style="font-family:'AvenirNextHeavyItalic';font-size:4.9em;height:15%;margin-bottom:3%">Write Me</p>
+					<p class="mini-title" style="height:15%;margin-bottom:3%">Write Me</p>
 
 					<form id="contact-form" style="height:80%;vertical-align: middle" method="POST" action="send">
 						<h3 id="error1" style='margin-left:8px; color:red'>Enter a valid email please!</h3><br><div id="email1"><input id="contact-email" style="width:90%" type="email" name="email" placeholder="Keep in touch with your E-mail"></div>
@@ -111,29 +111,29 @@ Do the following if you're using your customized build of modernizr (http://www.
 					<div class="so1"><img class="soImg1" src="public/img/so1.png"></div>
 					<div class="so2"><img class="soImg2" src="public/img/so2.png"></div>
 				</div>
-				<div style="position:absolute;bottom:0px;width:100%;height:25%;background:white;border-top: 1px solid #E6E7E8">
-					<div style="display:flex;flex-wrap:wrap;margin-top:.5%;margin-left:15%">
-						<div style="width:570px">
-							<p style="font-family:AvenirNextBoldItalic;color:black;font-size:3em;margin-top:.5%;margin-bottom:.5%">Instant reading, faster knowing</p>
+				<div class="description-box">
+					<div class="title-icon-box">
+						<div class="title-length">
+							<p class="title-font">Instant reading, faster knowing</p>
 						</div>
-						<div style="display:flex;width:380px; height:40px; font-family:AvenirNextBold;font-size:1.2em;margin-bottom:.5%">
+						<div class="icon-box">
 							<a href="https://www.youtube.com/watch?v=y24Rw-SWyMI" target="_blank" id="knowMore">
-								<div style="width:40px">
-									<img style="margin-top:4px" src="public/img/play.png">
+								<div class="watch-more">
+									<img class="play" src="public/img/play.png">
 								</div>
 								<p style="width:60px;margin-top:14%;margin-left:-6%">More</p>
 							</a>
 							<a href="https://chrome.google.com/webstore/detail/speak-out/pncollhcmilogpggdbibckiolebhnafl?hl=en" target="_blank" id="addChrome">
-								<p style="margin-top:10%;width:140px">Add to <span style="color: rgb(255,196,20)">Chrome</span></p>
+								<p style="margin-top:10%">Add to <span style="color: rgb(255,196,20)">Chrome</span></p>
 							</a>
 							<a href="https://github.com/Nickchen2016/Speak-Out" target="_blank" >
-								<div style="width:40px;height:40px">
-									<img class="icon" src="public/img/gitblack.png">
+								<div class="git-icon">
+									<img src="public/img/gitblack.png">
 								</div>
 							</a>
 						</div>
 					</div>
-					<p style="width:77%;font-family:AvenirNextUltraLt;color:black;font-size:1.5em; line-height:1.3;margin-left:15%">Have you ever feel you can understand things faster by listening someone talks to you? 
+					<p class="description">Have you ever feel you can understand things faster by listening someone talks to you? 
 					 Then, you should try Speak-Out(SO). SO is a Chrome extension for English speaker who needs to absorb a massive 
 					 amount of text-based material in a short period of time.</p>
 				</div>
@@ -141,68 +141,68 @@ Do the following if you're using your customized build of modernizr (http://www.
 			<section>
 	
 				<div style="width:100%;height:75%">
-					<div style="margin:5% 0 0 15%;width:78%"><img class="talkImg" src="public/img/chat.png"></div>
+					<div class="io"><img class="talkImg" src="public/img/chat.jpg"></div>
 				</div>
-				<div style="position:absolute;bottom:0px;width:100%;height:25%;background:white;border-top: 1px solid #E6E7E8">
-					<div style="display:flex;flex-wrap:wrap;margin-top:.5%;margin-left:15%">
-						<div style="width:550px">
-							<p style="font-family:AvenirNextBoldItalic;color:black;font-size:3em;margin-top:1%;margin-bottom:.5%">Under the hood of video chat</p>
+				<div class="description-box">
+					<div class="title-icon-box">
+						<div class="title-length">
+							<p class="title-font">Under the hood of video chat</p>
 						</div>
-						<div style="display:flex;width:240px; height:40px; font-family:AvenirNextBold;font-size:1.2em;margin-bottom:.5%">
-							<a href="https://www.youtube.com/watch?v=y24Rw-SWyMI" target="_blank" id="knowMore">
-								<div style="width:40px">
-									<img style="margin-top:4px" src="public/img/play.png">
+						<div class="icon-box">
+							<a href="https://www.youtube.com/watch?v=205_ZzfagnU&t" target="_blank" id="knowMore">
+								<div class="watch-more">
+									<img class="play" src="public/img/play.png">
 								</div>
 								<p style="width:60px;margin-top:14%;margin-left:-6%">More</p>
 							</a>
 							<a href="https://github.com/Nickchen2016/talk.io" target="_blank" >
-								<div style="width:40px;height:40px">
-									<img class="icon" src="public/img/gitblack.png">
+								<div class="git-icon">
+									<img src="public/img/gitblack.png">
 								</div>
 							</a>
 						</div>
 					</div>
-					<p style="width:77%;font-family:AvenirNextUltraLt;color:black;font-size:1.5em; line-height: 1.3;margin-left:15%">The beauty of online chat app provides us with a whole new way to communicate with each other.
+					<p class="description">The beauty of online chat app provides us with a whole new way to communicate with each other.
 						But, what is the real power under the hood which supports this great idea? Talk.io is an experimental project that digs into the magic of WebRTC.</p>
 				</div>
 
 			</section>
 			<section>
-
 				<div style="width:100%;height:75%">
-					<div style="margin:4% 0 0 12%;width:80%"><img class="talkImg" src="public/img/ec3.png"></div>
+					<div class="ec"><img class="talkImg" src="public/img/ec3.png"></div>
 				</div>
-				<div style="position:absolute;bottom:0px;width:100%;height:25%;background:white;border-top: 1px solid #E6E7E8">
-					<div style="display:flex;flex-wrap:wrap;margin-top:.5%;margin-left:15%">
-						<div style="width:470px">
-							<p style="font-family:AvenirNextBoldItalic;color:black;font-size:3em;margin-top:.5%;margin-bottom:.5%">A funny way of navigating</p>
+				<div class="description-box">
+					<div class="title-icon-box">
+						<div class="title-length">
+							<p class="title-font">A funny way of navigating</p>
 						</div>
-						<div style="display:flex;width:360px; height:40px; font-family:AvenirNextBold;font-size:1.2em;margin-bottom:.5%">
-							<a href="https://www.youtube.com/watch?v=y24Rw-SWyMI" target="_blank" id="knowMore">
-								<div style="width:40px">
-									<img style="margin-top:4px" src="public/img/play.png">
+						<div class="icon-box">
+							<a href="https://www.youtube.com/watch?v=oapgs4yOKjc" target="_blank" id="knowMore">
+								<div class="watch-more">
+									<img class="play" src="public/img/play.png">
 								</div>
 								<p style="width:60px;margin-top:14%;margin-left:-6%">More</p>
 							</a>
 							<a href="https://expo.io/@nick2018/emoji-compass" target="_blank" id="deployExpo">
-								<p style="margin-top:10%;width:140px;color: rgb(194,181,155)">Sample on <span style="color: white">Expo</span></p>
+								<p style="margin-top:10%;color: rgb(194,181,155)">Sample on <span style="color: white">Expo</span></p>
 							</a>
 							<a href="https://github.com/Mr-Chen-Alliance/emoji-compass" target="_blank" >
-								<div style="width:40px;height:40px">
-									<img class="icon" src="public/img/gitblack.png">
+								<div class="git-icon">
+									<img src="public/img/gitblack.png">
 								</div>
 							</a>
 						</div>
 					</div>
-					<p style="width:77%;font-family:AvenirNextUltraLt;color:black;font-size:1.5em; line-height: 1.3;margin-left:15%">Have your ever feel that you are tired of staring at the rigid old school compass pattern? Here you got Emoji-Compass as the second choice! 
+					<p class="description">Have your ever feel that you are tired of staring at the rigid old school compass pattern? Here you got Emoji-Compass as the second choice! 
 						It is a mobile compass app with a simplfied design. All we show you is what you need at a glance.
 					</p>
 				</div>
 
 			</section>
 			<section>
-
-				<h2>Realax, it's on the way...</h2>
+				<div style="width:100%;height:100%">
+					<h2>Relax, it's on the way...</h2>
+				</div>
 			</section>
 		</div>
 
@@ -257,19 +257,18 @@ Do the following if you're using your customized build of modernizr (http://www.
 	</script>
   </div>
   <div id="logo">
-		<a href="views/index.handlebars"><img style="margin:1% 1.5%" src="public/img/logo.png" ></a>
+		<a href="https://iconic-workshop.herokuapp.com"><img id="logo-img" style="margin:1% 1.5%" src="public/img/logo.png" ></a>
   </div>
 
   <div id="toggle-btn" onclick="toggleSidebar()">
-	<div id="burgerBox">
         <span></span>
         <span></span>
 		<span></span>
-	</div>
+		<div id="burgerBox"></div>
   </div>
   <div id="feedback-box">
-	<div style="margin:2% auto;
-				width:320px;height:55px;border-radius:12px;text-align:center;
+	<div id="text-box" style="margin:2% auto;
+				border-radius:12px;text-align:center;
 				background:white;-webkit-box-shadow:0 2px 10px rgba(0, 0, 0, 0.3);
 				-moz-box-shadow:0 1px 10px rgba(0, 0, 0, 0.3);
 				box-shadow:0 1px 10px rgba(0, 0, 0, 0.3);"><p id="email-feedback" style="font-size:1.6em;color: black"><br>{{msg}}</p></div>
@@ -278,3 +277,4 @@ Do the following if you're using your customized build of modernizr (http://www.
   </div>
 </body>
 </html>
+
